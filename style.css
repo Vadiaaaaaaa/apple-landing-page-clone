@@ -1,0 +1,439 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #7b7b7b;
+    font-weight: lighter;
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    background:#0e0e0e;
+    height: 53px;
+    padding: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+    position: relative; /* Ensures dropdown positions correctly */
+    z-index: 1001;
+}
+
+/* Navbar items */
+.menu {
+    color: white;
+    cursor: pointer;
+    padding: 10px 23px;
+    font-size: 16px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    position: relative;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    position: absolute;
+    top: 50px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background: #0e0e0e;
+    padding: 20px 10px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+
+    /* Initially hidden */
+    opacity: 0;
+    transform: translateY(-50px); /* Moves up initially */
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+/* Show dropdown smoothly */
+.dropdown-container.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+/* Target only the first column's heading */
+.dropdown-content div:first-child p:first-of-type {
+    font-size: 14px; /* Adjust this size */
+    font-weight: lighter;
+    color: #7b7b7b;
+    margin-bottom: 10px;
+}
+
+/* Explore section (larger text) */
+.dropdown-content div:first-child p {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Shop & Support/More sections (smaller text) */
+.dropdown-content div p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Dropdown links */
+.dropdown-content p a {
+    color: #d0d0d0;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content p a:hover {
+    color: white;
+}
+
+#p1 {
+    width: 100vw;
+    height: 600px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#p1 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.pHeading{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    color: white;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    left: 0px;
+    top: 40px;
+    font-size: 45px;
+    z-index: 2;
+}
+.pSub{
+    position: absolute;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    left: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10;
+    color: white;
+    top: 93px;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.learn{
+    border-radius: 30px;
+    width: 140px;
+    height: 46px;
+    background-color: #0071E3;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+.learn:hover{
+    cursor: pointer;
+    background-color: #0080ff;
+    transition: 0.4s;
+}
+
+.learn:active{
+    cursor: pointer;
+    background-color:#036bd2;
+    color: white;
+    transition: 0.4s;
+}
+
+.buy{
+    border-radius: 30px;
+    width: 80px;
+    height: 46px;
+    background-color:transparent;
+    color:#0071E3;
+    border-width: 1.6px;
+    border-color: #0071E3;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: 300;
+    box-shadow: none;
+    border-style: solid;
+    margin-left: 10px;
+}
+
+.buy:hover{
+    cursor: pointer;
+    background-color:#0080ff;
+    color: white;
+    transition: 0.4s;
+}
+
+.buy:active{
+    cursor: pointer;
+    background-color:#036bd2;
+    color: white;
+    transition: 0.4s;
+}
+
+#p1Buttons {
+    position: absolute;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    top: 480px;
+    left: 0; 
+    z-index: 2;
+}
+
+
+#p1t1{
+    position: absolute;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    top: 540px;
+    left: 0; 
+    z-index: 2;
+    color: #c6c6c6;
+}
+
+#emi{
+    height: 50px;
+    text-align: center;
+    background-color: #242427;
+}
+
+#emi p {
+    padding-top: 15px;
+    color: #ffffff;
+}
+#emi p a{
+    color: #0071E3;
+    text-decoration: none;
+}
+#emi p a:hover{
+    text-decoration:underline;
+}
+
+#p2 {
+    width: 100vw; 
+    height: 600px; 
+    background-image: url(p2.png); 
+    background-size: 100vw; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+    margin-top: 20px;
+    margin-bottom: 20px;;
+}
+
+#p2h{
+    position: absolute;
+    left: 595px;
+    top: 70px;
+    font-size: 60px;
+}
+
+#p2s{
+    position: absolute;
+    left: 615px;
+    top: 140px;
+}
+#p2Buttons{
+    position: absolute;
+    top: 480px;
+    left: 625px
+
+}
+
+#p2t2{
+    position: absolute;
+    top: 540px;
+    left: 580px;
+    color: #303030;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;  /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    text-align: center;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-container .content {
+    color: white;
+    font-size: 2rem;
+    z-index: 1; /* Ensures text appears above video */
+}
+
+#endtext p{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.endPara{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.endpara1{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.endpara2{
+    display: inline-block;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 20px;
+}
+
+.hr-container {
+    width: 100%; 
+    max-width: 1280px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+
+.custom-hr {
+    border: none;
+    height: 1px;
+    background-color: #d2d2d7;
+    width: 100%; /* Ensures it takes the full width of the container, not the full page */
+}
+
+
+footer {
+    background-color: #f5f5f7;
+    font-family: Arial, sans-serif;
+    padding: 40px 80px;
+    color: #333;
+    font-size: 14px;
+}
+.footer-title {
+    
+    font-weight: bold;
+    margin-bottom: 200px; /* Increased spacing below headings */
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 40px; /* Added more space between columns */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Increased minimum width for better spacing */
+    margin-bottom: 30px;
+}
+
+.footer-column p{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.footer-column p:not(.footer-title):hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.footer-links {
+    color: gray; /* Changed links to gray */
+    text-decoration: none;
+    display: block; /* Ensures links are on separate lines */
+    margin-bottom: 10px; /* More space between links */
+}
+
+.footer-links a{
+    color: gray; /* Changed links to gray */
+}
+
+.footer-links:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px; /* More space above bottom section */
+}
+
+.footer-bottom a {
+    color: #0071e3;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #d2d2d7;
+    width: 85%; /* Made the line slightly wider */
+    max-width: 1200px;
+    margin: 30px auto; /* More space above and below the line */
+}
+
+.footer-country {
+    margin-top: 15px;
+    color: #666;
+}
