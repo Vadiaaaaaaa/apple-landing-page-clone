@@ -177,8 +177,49 @@ support: `
         <p><a href="#">Billing & Subscriptions</a></p>
         <p><a href="#">Accessibility</a></p>
     </div>
+`,
+tv: `
+    <div>
+        <p>Explore TV & Home</p>
+        <p><a href="#">Apple TV 4K</a></p>
+        <p><a href="#">HomePod</a></p>
+        <p><a href="#">HomePod mini</a></p>
+    </div>
+    <div>
+        <p>Shop TV & Home</p>
+        <p><a href="#">Shop Apple TV</a></p>
+        <p><a href="#">Shop HomePod</a></p>
+        <p><a href="#">TV & Home Accessories</a></p>
+    </div>
+`,
+entertainment: `
+    <div>
+        <p>Explore Entertainment</p>
+        <p><a href="#">Apple Music</a></p>
+        <p><a href="#">Apple TV+</a></p>
+        <p><a href="#">Apple Arcade</a></p>
+        <p><a href="#">Apple Fitness+</a></p>
+    </div>
+    <div>
+        <p>More from Entertainment</p>
+        <p><a href="#">Apple One</a></p>
+        <p><a href="#">Apple Podcasts</a></p>
+        <p><a href="#">Apple Books</a></p>
+    </div>
+`,
+search: `
+    <div class="search-container">
+        <input type="text" placeholder="Search apple.com" class="search-input">
+        <div class="search-links">
+            <p>Quick Links</p>
+            <p><a href="#">Find a Store</a></p>
+            <p><a href="#">Accessories</a></p>
+            <p><a href="#">AirPods</a></p>
+            <p><a href="#">Apple Intelligence</a></p>
+            <p><a href="#">Apple Trade In</a></p>
+        </div>
+    </div>
 `
-
 };
 
 // Keep track if the dropdown should stay open
@@ -214,7 +255,7 @@ if (video) {
     video.addEventListener("mouseenter", () => {
         console.log("Hover detected, playing video...");
         video.currentTime = 0;
-        video.muted = true; // Ensure it's muted to allow autoplay
+        video.muted = true; 
         video.play().catch(err => console.error("Error playing video:", err));
     });
 

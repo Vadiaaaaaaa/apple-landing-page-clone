@@ -19,7 +19,7 @@ body {
     padding: 10px;
     justify-content: flex-start;
     gap: 20px;
-    position: relative; /* Ensures dropdown positions correctly */
+    position: relative; 
     z-index: 1001;
 }
 
@@ -37,45 +37,45 @@ body {
 /* Dropdown container */
 .dropdown-container {
     position: absolute;
-    top: 50px; /* Adjust based on navbar height */
+    top: 50px; 
     left: 0;
     width: 100%;
     background: #0e0e0e;
     padding: 20px 10px;
-    height: 350px;
+    height: 500px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
     z-index: 1000;
 
-    /* Initially hidden */
+    
     opacity: 0;
-    transform: translateY(-50px); /* Moves up initially */
+    transform: translateY(-50px); 
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     pointer-events: none;
 }
 
-/* Show dropdown smoothly */
+
 .dropdown-container.active {
     opacity: 1;
     transform: translateY(0);
     pointer-events: all;
 }
 
-/* Dropdown content */
 .dropdown-content {
     display: flex;
     gap: 40px;
     justify-content: flex-start;
+    margin-left: 100px;
 }
 
-/* Target only the first column's heading */
+
 .dropdown-content div:first-child p:first-of-type {
-    font-size: 14px; /* Adjust this size */
+    font-size: 14px; 
     font-weight: lighter;
     color: #7b7b7b;
     margin-bottom: 10px;
 }
 
-/* Explore section (larger text) */
+
 .dropdown-content div:first-child p {
     font-size: 26px;
     font-weight: bold;
@@ -83,13 +83,13 @@ body {
     margin-bottom: 10px;
 }
 
-/* Shop & Support/More sections (smaller text) */
+
 .dropdown-content div p {
     font-size: 14px;
     margin-bottom: 8px;
 }
 
-/* Dropdown links */
+
 .dropdown-content p a {
     color: #d0d0d0;
     text-decoration: none;
@@ -294,8 +294,8 @@ body {
     height: 100vh;
     overflow: hidden;
     display: flex;
-    align-items: center;  /* Centers vertically */
-    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
 }
 
@@ -310,7 +310,7 @@ body {
 .video-container .content {
     color: white;
     font-size: 2rem;
-    z-index: 1; /* Ensures text appears above video */
+    z-index: 1; 
 }
 
 #endtext p{
@@ -352,7 +352,7 @@ body {
     border: none;
     height: 1px;
     background-color: #d2d2d7;
-    width: 100%; /* Ensures it takes the full width of the container, not the full page */
+    width: 100%; 
 }
 
 
@@ -366,7 +366,7 @@ footer {
 .footer-title {
     
     font-weight: bold;
-    margin-bottom: 200px; /* Increased spacing below headings */
+    margin-bottom: 200px; 
 }
 .footer-container {
     display: flex;
@@ -374,12 +374,12 @@ footer {
     max-width: 1200px;
     margin: auto;
     flex-wrap: wrap;
-    gap: 40px; /* Added more space between columns */
+    gap: 40px; 
 }
 
 .footer-column {
     flex: 1;
-    min-width: 200px; /* Increased minimum width for better spacing */
+    min-width: 200px; 
     margin-bottom: 30px;
 }
 
@@ -396,23 +396,23 @@ footer {
 
 
 .footer-links {
-    color: gray; /* Changed links to gray */
+    color: gray; 
     text-decoration: none;
-    display: block; /* Ensures links are on separate lines */
-    margin-bottom: 10px; /* More space between links */
+    display: block; 
+    margin-bottom: 10px; 
 }
 
 .footer-links a{
-    color: gray; /* Changed links to gray */
+    color: gray; 
 }
 
 .footer-links:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline; 
 }
 
 .footer-bottom {
     text-align: center;
-    margin-top: 40px; /* More space above bottom section */
+    margin-top: 40px; 
 }
 
 .footer-bottom a {
@@ -428,12 +428,86 @@ hr {
     border: none;
     height: 1px;
     background-color: #d2d2d7;
-    width: 85%; /* Made the line slightly wider */
+    width: 85%; 
     max-width: 1200px;
-    margin: 30px auto; /* More space above and below the line */
+    margin: 30px auto; 
 }
 
 .footer-country {
     margin-top: 15px;
     color: #666;
+}
+.search-container {
+    position: relative;
+    width: 100vw; 
+    margin-left: 20px; 
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    background: #0e0e0e; 
+    color: #f5f5f7; 
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #8f8f8f;
+    font-size: 26px;
+}
+
+.search-links {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    background: #0e0e0e;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    z-index: 10;
+    display: block; 
+}
+
+.search-links p {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #a1a1a6; 
+    font-weight: 500;
+    text-align: left; 
+}
+
+.search-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f5f5f7; 
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    text-align: left; 
+    
+}
+
+.search-links a:hover {
+    color: #2997ff; 
+    background-color: #323236;
+    background-size: 100vw;
+}
+
+.search-links a::before {
+    content: "→"; 
+    margin-right: 10px;
+    font-size: 16px;
+    color: #6e6e73;
+    transition: color 0.3s ease;
+}
+
+.search-links a:hover::before {
+    color: #ffffff;
+    background-color: #323236;
 }
